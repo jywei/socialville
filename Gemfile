@@ -27,6 +27,11 @@ gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'simple_form', '~> 3.2', '>= 3.2.1'  #rails generate simple_form:install --bootstrap
+
+gem 'devise', '~> 4.1', '>= 4.1.1'  #rails generate devise:install
+                                    #rails generate devise User
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
