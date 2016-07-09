@@ -31,6 +31,9 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'  #rails generate simple_form:install --b
 
 gem 'devise', '~> 4.1', '>= 4.1.1'  #rails generate devise:install
                                     #rails generate devise User
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
+gem 'bootstrap-sass-extras', '~> 0.0.7'   #rails g bootstrap:install
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
