@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_attached_file :image,
-                    styles: { medium: "300x300>", thumb: "100x100>" },
+                    styles: { medium: "300x300>", thumb: "100x100>", micro: "40x40>" },
                     default_url: "nia.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/ 
 end
