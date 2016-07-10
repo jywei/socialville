@@ -35,6 +35,24 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'bootstrap-sass-extras', '~> 0.0.7'   #rails g bootstrap:install
 
+gem 'paperclip', '~> 5.0'  #rails generate paperclip user image 
+
+# Paperclip is now compatible with aws-sdk >= 2.0.0.
+
+# If you are using S3 storage, aws-sdk >= 2.0.0 requires you to make a few small
+# changes:
+
+# * You must set the `s3_region`
+# * If you are explicitly setting permissions anywhere, such as in an initializer,
+#   note that the format of the permissions changed from using an underscore to
+#   using a hyphen. For example, `:public_read` needs to be changed to
+#   `public-read`.
+
+gem 'aws-sdk', '>= 2.0.34'
+
+# For a walkthrough of upgrading from 4 to 5 and aws-sdk >= 2.0 you can watch
+# http://rubythursday.com/episodes/ruby-snack-27-upgrade-paperclip-and-aws-sdk-in-prep-for-rails-5
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
