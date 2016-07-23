@@ -4,10 +4,37 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :username, required: true, autofocus: true %>
-    <%= f.input :email, required: true, autofocus: false %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+    <%= f.input :username, required: true,
+                           autofocus: true,
+                           placeholder: "Choose a username" %>
+
+    <%= f.input :email, required: true,
+                        autofocus: false,
+                        placeholder: "Enter your email" %>
+
+    <%= f.input :age, required: false,
+                      autofocus: false,
+                      placeholder: "Tell us more about you" %>
+
+    <%= f.input :gender, required: false,
+                         autofocus: false,
+                         placeholder: "Tell us more about you" %>
+
+    <%= f.input :location, required: false,
+                           autofocus: false,
+                           placeholder: "Tell us more about you" %>
+
+    <%= f.input :bio, required: false,
+                      autofocus: false,
+                      placeholder: "Write something about yourself" %>
+
+    <%= f.input :password, required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                placeholder: "Enter your password" %>
+
+    <%= f.input :password_confirmation, required: true,
+                                        placeholder: "Please your password again" %>
+
   </div>
 
   <div class="form-actions">

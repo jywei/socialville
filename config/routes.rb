@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   root to: "statuses#index"
 
-  resources :users, only: [:index, :show]    
-  resources :friendships, only: [:create, :destroy, :accept] do 
-    member do 
+  resources :users, only: [:index, :show]
+  resources :friendships, only: [:create, :destroy, :accept] do
+    member do
       put :accept
     end
   end

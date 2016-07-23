@@ -41,6 +41,11 @@ GEM
     arel (7.0.0)
     autoprefixer-rails (6.3.7)
       execjs
+    awesome_print (1.7.0)
+    awesome_rails_console (0.4.0)
+      awesome_print
+      pry-rails
+      railties
     aws-sdk (2.3.21)
       aws-sdk-resources (= 2.3.21)
     aws-sdk-core (2.3.21)
@@ -125,6 +130,8 @@ GEM
     pry-byebug (3.4.0)
       byebug (~> 9.0)
       pry (~> 0.10)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     puma (3.4.0)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -207,6 +214,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_rails_console
   aws-sdk (>= 2.0.34)
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3, >= 3.3.6)
