@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160723154303) do
+ActiveRecord::Schema.define(version: 20160731154056) do
 
   create_table "friendships", force: :cascade do |t|
     t.integer  "user_id"
@@ -56,6 +56,11 @@ ActiveRecord::Schema.define(version: 20160723154303) do
     t.string   "gender"
     t.string   "location"
     t.date     "age"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.string   "alt_email"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

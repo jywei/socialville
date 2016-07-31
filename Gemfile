@@ -35,7 +35,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'bootstrap-sass-extras', '~> 0.0.7'   #rails g bootstrap:install
 
-gem 'paperclip', '~> 5.0'  #rails generate paperclip user image 
+gem 'paperclip', '~> 5.0'  #rails generate paperclip user image
 
 # Paperclip is now compatible with aws-sdk >= 2.0.0.
 
