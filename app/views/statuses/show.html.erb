@@ -6,12 +6,12 @@
   <div class="row">
     <div class="col-sm-2">
       <div class="picture">
-        <%= image_tag @status.user.image.url(:thumb), class: "img-rounded" %>
+        <%= image_tag @status.user.image.url(:thumb), class: "img-rounded", size: "150x150" %>
       </div>
     </div>
     <div class="col-sm-6">
       <h4>
-        <label class="label label-info"><%= @status.user.username %></label>
+        <label class="label label-primary"><%= @status.user.username %></label>
       </h4>
       <h5>
         <i class="fa fa-calendar"></i>
@@ -21,18 +21,18 @@
         <div id="messages">
           <%= render @status.messages %>
         </div>
-        <%= simple_form_for [@status, Message.new ] do |message|%>
+        <%= simple_form_for [@status, Message.new ] do |message| %>
           <%= message.input :content,
                             autofocus: true,
                             placeholder: "Enter Your Message",
                             label: false %>
           <%= message.submit "Send",
-                             class: "btn btn-info btn-xs" %>
+                             class: "btn btn-success btn-xs" %>
         <% end %>
       </p>
     </div>
     <div class="col-sm-4" data-no-turbolink="">
-      <%= link_to " Back", statuses_path, class: "btn btn-info btn-download btn-round pull-right makeLoading fa fa-share" %>
+      <%= link_to " Back", statuses_path, class: "btn btn-default btn-download btn-round pull-right makeLoading fa fa-share" %>
     </div>
   </div>
 </div>
