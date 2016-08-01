@@ -1,9 +1,10 @@
 development:
-  adapter: async
+  adapter: redis
+  url: redis://:12345678@pub-redis-12835.us-east-1-4.2.ec2.garantiadata.com:12835
 
 test:
   adapter: async
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://:12345678@pub-redis-12835.us-east-1-4.2.ec2.garantiadata.com:12835
