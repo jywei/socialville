@@ -52,6 +52,8 @@ gem 'aws-sdk', '>= 2.0.34'
 
 gem 'awesome_rails_console'
 
+gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
 # For a walkthrough of upgrading from 4 to 5 and aws-sdk >= 2.0 you can watch
 # http://rubythursday.com/episodes/ruby-snack-27-upgrade-paperclip-and-aws-sdk-in-prep-for-rails-5
 
