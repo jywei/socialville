@@ -91,7 +91,7 @@
         <%= f.input :cover, as: :file %>
      </div>
       <div class="col-md-4">
-        <%= image_tag @user.image.url(:preview),
+        <%= image_tag @user.cover.url(:preview),
             class: "img-rounded text-center",
             size: '230x100' %>
       </div>
