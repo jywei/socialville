@@ -1,4 +1,4 @@
-<h2>Profiles</h2>
+
 <div class="btn-group" role="group" aria-label="Default Button Groups">
   <%= link_to "Everyone", users_path, class: "btn btn-default #{'active' unless params[:people]}" %>
   <%= link_to "Friends", users_path(people: "friends"), class: "btn btn-default #{'active' if params[:people] == 'friends'}" %>
@@ -6,7 +6,6 @@
   <%= link_to "Pending", users_path(people: "pending"), class: "btn btn-default #{'active' if params[:people] == 'pending'}" %>
 </div>
 
-<hr>
 
 <div class="container">
   <div class="row">
