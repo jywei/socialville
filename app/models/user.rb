@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
   has_attached_file :cover,
                     styles: { cover: "700x300>", preview: "230x100>" },
-                    default_url: "nia.png"
+                    default_url: "backg.png"
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
