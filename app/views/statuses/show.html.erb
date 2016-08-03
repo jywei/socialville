@@ -9,7 +9,7 @@
         <%= image_tag @status.user.image.url(:thumb), class: "img-rounded", size: "150x150" %>
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <h4>
         <label class="label label-primary"><%= @status.user.username %></label>
       </h4>
@@ -21,6 +21,7 @@
         <div id="messages">
           <%= render @status.messages %>
         </div>
+        <br>
         <%= simple_form_for [@status, Message.new ] do |message| %>
           <%= message.input :content,
                             autofocus: true,
@@ -31,7 +32,7 @@
         <% end %>
       </p>
     </div>
-    <div class="col-sm-4" data-no-turbolink="">
+    <div class="col-sm-2" data-no-turbolink="">
       <%= link_to " Back", statuses_path, class: "btn btn-default btn-download btn-round pull-right makeLoading fa fa-share" %>
     </div>
   </div>

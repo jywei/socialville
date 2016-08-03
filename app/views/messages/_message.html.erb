@@ -1,3 +1,21 @@
-<div class="message">
-  <p><%= message.content %></p>
-</div>
+
+<%= render "messages/template" %>
+
+<li class="right clearfix">
+  <span class="chat-img pull-right">
+    <%= link_to(image_tag(message.user.image(:micro), size: "100x100"), user_path(message.user.username)) %>
+  </span>
+  <div class="chat-body clearfix">
+    <div class="header">
+      <strong class="primary-font">
+        <%= link_to "#{message.user.username}", user_path(message.user.username)  %>
+      </strong>
+      <small class="pull-right text-muted"><i class="fa fa-clock-o"></i>
+        <%= time_ago_in_words(message.created_at)%>
+      </small>
+    </div>
+    <div class=“message”>
+      <p><%= message.content %></p>
+    </div>
+  </div>
+</li>

@@ -1,6 +1,3 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-
 <div class="bootstrap snippet">
   <div class="row">
     <div class="col-md-12">
@@ -10,11 +7,13 @@
       <div class="panel">
         <div class="panel-bg-cover">
           <%= image_tag @user.image.url(:cover),
-          class: "img-rounded img-responsive", size: '100x230' %>
+                        class: "img-rounded img-responsive",
+                        size: '100x230' %>
         </div>
         <div class="panel-media">
           <%= image_tag @user.image.url(:thumb),
-          class: "panel-media-img img-rounded img-border-light", size: '100x100' %>
+                        class: "panel-media-img img-circle img-border-light",
+                        size: '100x100' %>
           <div class="row">
             <div class="col-md-7">
               <h3 class="panel-media-heading"><%= @user.username %></h3>
