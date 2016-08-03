@@ -54,6 +54,10 @@ gem 'awesome_rails_console'
 
 gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.0'
+
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5' # https://rubygems.org/gems/jquery-ui-rails/versions/5.0.5
+
 # For a walkthrough of upgrading from 4 to 5 and aws-sdk >= 2.0 you can watch
 # http://rubythursday.com/episodes/ruby-snack-27-upgrade-paperclip-and-aws-sdk-in-prep-for-rails-5
 

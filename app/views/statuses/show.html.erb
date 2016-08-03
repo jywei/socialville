@@ -1,6 +1,6 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-<span class="admin"> <%= link_to 'Edit', edit_status_path(@status) %> </span>
+<span class="admin"> <%= link_to 'Edit', edit_status_path(@status), class: "btn btn-link" %> </span>
 
 <div class="post-list">
   <div class="row">
@@ -28,7 +28,7 @@
                             placeholder: "Enter Your Message",
                             label: false %>
           <%= message.submit "Send",
-                             class: "btn btn-success btn-xs" %>
+                             class: "btn btn-primary" %>
         <% end %>
       </p>
     </div>
