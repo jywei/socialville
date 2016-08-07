@@ -50,9 +50,7 @@
           <%= f.input :location, required: false, autofocus: false, label: false,
           placeholder: "Enter your area" %>
         </div>
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4"></div>
+        <%= render "devise/registrations/social", f: f %>
     </div>
 
   <%= f.input :bio, required: false, autofocus: false, label: false,

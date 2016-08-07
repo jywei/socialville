@@ -29,7 +29,15 @@ class ApplicationController < ActionController::Base
                          :location,
                          :bio,
                          :alt_email,
-                         :cover)
+                         :cover
+                         :youtube_permission,
+                         :facebook_permission,
+                         :email_permission,
+                         :twitter_permission,
+                         :birthday_permission,
+                         :facebook,
+                         :twitter,
+                         :youtube)
     end
   end
 end
