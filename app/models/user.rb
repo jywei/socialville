@@ -56,4 +56,54 @@ class User < ApplicationRecord
   def friendship_relation(user_2)
     Friendship.where(user_id: [self.id,user_2.id], friend_id: [self.id,user_2.id]).first
   end
+
+  def twitter_model
+    if self.twitter_permission == true && self.twitter.present?
+      self.twitter
+    else
+      "Ask Me!"
+    end
+  end
+
+    def facebook_model
+    if self.facebook_permission == true && self.facebook.present?
+      self.facebook
+    else
+      "Ask Me!"
+    end
+  end
+
+    def youtube_model
+    if self.youtube_permission == true && self.youtube.present?
+      self.youtube
+    else
+      "Ask Me!"
+    end
+  end
+
+    def birthday_model
+    if self.age.present?
+      self.age.strftime('%B %e, %Y')
+    else
+      "Wanna buy me a gift?"
+    end
+  end
+
+  def location_model
+    if self.location.present?
+      self.location
+    else
+      "No location set"
+    end
+  end
+
+  def email_model
+    if self.email_permission == true
+      self.email
+    elsif self.alt_email.present? && self.email_permission == false
+      self.alt_email
+    else
+      "I don't share my email"
+    end
+  end
 end
