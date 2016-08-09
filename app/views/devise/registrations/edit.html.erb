@@ -31,11 +31,13 @@
       label: false,  placeholder: "Enter a public email" %>
     </div>
     <div class="col-md-6">
-      <div class="text-muted text-center">
-      <%= f.input :age, start_year: 1930, end_year: 2008,
-      prompt: {year: "Year", day: "Day", month: "Month"},
-      order: [:month, :day, :year], required: false, label: false %>
-      What's Your Birhday?
+      <div class="text-center">
+        <%= f.text_field :age %><br />
+        <% if @user.age.present? %>
+          <p>Your Birthday is on: <%= @user.age.strftime("%B %-d, %Y") %></p>
+        <% else %>
+          <p>When were you born?</p>
+        <% end %>
       </div>
     </div>
     <div class="col-md-2">
