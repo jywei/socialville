@@ -19,7 +19,7 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -59,6 +59,8 @@ gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.0'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5' # https://rubygems.org/gems/jquery-ui-rails/versions/5.0.5
 
 gem 'dotiw', '~> 3.1', '>= 3.1.1' #https://rubygems.org/gems/dotiw/versions/3.1.1
+
+gem 'cancancan', '~> 1.15'  #rails g cancan:ability
 
 # For a walkthrough of upgrading from 4 to 5 and aws-sdk >= 2.0 you can watch
 # http://rubythursday.com/episodes/ruby-snack-27-upgrade-paperclip-and-aws-sdk-in-prep-for-rails-5
