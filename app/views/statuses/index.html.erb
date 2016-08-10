@@ -1,5 +1,13 @@
+<% unless current_user %>
+  <div class="jumbotron">
+    <h1>Welcome To Socialville</h1>
+    <p>Best place to hang!</p>
+    <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg"  %></p>
+  </div>
+<% end %>
+
 <div class="page-header">
-  <h1>Socialvilles User Statuses</h1>
+  <h1>Socialville User Statuses</h1>
 </div>
 
 <%= render "statuses/status" %>
