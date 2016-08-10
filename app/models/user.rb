@@ -18,7 +18,7 @@ class User < ApplicationRecord
                     styles: { cover: "700x300>", preview: "230x100>" },
                     default_url: "backg.png"
 
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+  validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
 
   def request_friendship(user_2)
     self.friendships.create(friend: user_2)

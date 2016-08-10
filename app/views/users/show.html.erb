@@ -13,20 +13,22 @@
                         size: '100x100' %>
           <div class="row">
             <div class="col-md-7">
-              <h3 class="panel-media-heading"><%= @user.username %></h3>
+              <h3 class="panel-media-heading">
+                <%= @user.username %>
+              </h3>
               <p class="text-muted mar-btm">
-                   Has <%= @user.active_friends.count %>
-                   <%=  "Friend".pluralize(@user.active_friends.count) %>
+                Has <%= @user.active_friends.count %>
+                <%=  "Friend".pluralize(@user.active_friends.count) %>
               </p>
-              <p class="text-muted mar-btm">Birthday</p>
+              <p class="text-muted mar-btm"><%= @user.birthday_model %></p>
             </div>
             <div class="col-md-5 pull-right">
               <button class="btn btn-sm btn-primary">
-                  <% if @user == current_user %>
-                    <%= link_to "Edit My Profile", edit_user_registration_path %>
-                  <% else %>
-                    <%= action_buttons(@user) %>
-                  <% end %>
+                <% if @user == current_user %>
+                  <%= link_to "Edit My Profile", edit_user_registration_path %>
+                <% else %>
+                  <%= action_buttons(@user) %>
+                <% end %>
               </button>
             </div>
           </div>
@@ -38,3 +40,10 @@
       </div>
     </div>
   </div>
+</div>
+
+<%= render "statuses/status" %>
+
+<br>
+
+
