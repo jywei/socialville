@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :users
+resources :friendships
+resources :messages
+resources :statuses
+
+    root to: "users#index"
+  end
+
   get 'users/index'
   get 'users/show'
 
